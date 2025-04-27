@@ -114,17 +114,7 @@ section h2::after {
     align-items: center;
     gap: 2rem;
     padding: 2rem;
-}
 
-.project {
-    background: var(--card-bg);
-    border-radius: 15px;
-    padding: 1.5rem;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-}
 /* Container for laying out cards horizontally */
 .project-container {
     display: flex;
