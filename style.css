@@ -108,7 +108,7 @@ section h2::after {
 }
 
 /* Portfolio Section */
-#portfolio, #certifications {
+#portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -116,8 +116,8 @@ section h2::after {
     padding: 2rem;
 }
 
-/* Container for laying out cards horizontally */
-.project-container, .certification-container {
+/* Container for laying out portfolio cards */
+.project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -126,12 +126,12 @@ section h2::after {
     max-width: 1200px;
 }
 
-/* Common Card Style */
-.project, .certification {
+/* Individual project card */
+.project {
     background: var(--card-bg);
     border-radius: 15px;
     overflow: hidden;
-    display: flex; /* Make card content horizontal */
+    display: flex;
     flex-direction: row;
     align-items: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -141,20 +141,20 @@ section h2::after {
     text-align: left;
 }
 
-.project:hover, .certification:hover {
+.project:hover {
     transform: translateY(-5px);
 }
 
-/* Image Style inside Card */
-.project img, .certification img {
+/* Project image */
+.project img {
     width: 40%;
     height: 100%;
     object-fit: cover;
-    border-radius: 15px 0 0 15px; /* Round only the left side */
+    border-radius: 15px 0 0 15px;
 }
 
-/* Content next to Image */
-.project-content, .certification-content {
+/* Project content */
+.project-content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -162,35 +162,122 @@ section h2::after {
     width: 60%;
 }
 
-.project-content h3, .certification-content h3 {
+.project-content h3 {
     color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
-.project-content a, .certification-content a {
+.project-content a {
     text-decoration: none;
     color: var(--text-color);
     margin-top: 0.5rem;
 }
 
-/* Responsive layout for smaller screens */
+/* Responsive for project cards */
 @media (max-width: 768px) {
-    .project, .certification {
-        flex-direction: column; /* Stack vertically */
+    .project {
+        flex-direction: column;
         max-width: 90%;
     }
 
-    .project img, .certification img {
+    .project img {
         width: 100%;
         height: 200px;
         border-radius: 15px 15px 0 0;
     }
 
-    .project-content, .certification-content {
+    .project-content {
         width: 100%;
         text-align: center;
     }
 }
+
+
+/* Certifications Section */
+#certifications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Container for laying out certification cards */
+.certification-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Individual certification card */
+.certification {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.certification:hover {
+    transform: translateY(-5px);
+}
+
+/* Certification image */
+.certification img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+}
+
+/* Certification content */
+.certification-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+}
+
+.certification-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.certification-content a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+/* Responsive for certification cards */
+@media (max-width: 768px) {
+    .certification {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .certification img {
+        width: 100%;
+        height: 200px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .certification-content {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 
 
 
