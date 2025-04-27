@@ -128,7 +128,7 @@ section h2::after {
 
 /* Individual project card */
 .project {
-     background: var(--card-bg);
+    background: var(--card-bg);
     border-radius: 15px;
     padding: 1.5rem;
     transition: transform 0.3s ease;
@@ -144,48 +144,21 @@ section h2::after {
 
 /* Project image */
 .project img {
-    width: 40%;
-    height: 100%;
+    width: 100%;
+    height: 200px;
     object-fit: cover;
-    border-radius: 15px 0 0 15px;
-}
-
-/* Project content */
-.project-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-}
-
-.project-content h3 {
-    color: var(--primary-color);
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
-
-.project-content a {
-    text-decoration: none;
-    color: var(--text-color);
-    margin-top: 0.5rem;
-}
-
-/* Responsive for project cards */
+/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
-    .project {
+    .project-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
         max-width: 90%;
-    }
-
-    .project img {
-        width: 100%;
-        height: 200px;
-        border-radius: 15px 15px 0 0;
-    }
-
-    .project-content {
-        width: 100%;
-        text-align: center;
     }
 }
 
@@ -233,44 +206,17 @@ section h2::after {
     border-radius: 10px;
     margin-bottom: 1rem;
 }
-
-/* Certification content */
-.certification-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-}
-
-.certification-content h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.certification-content a {
-    text-decoration: none;
-    color: var(--text-color);
-    margin-top: 0.5rem;
-}
-
-/* Responsive for certification cards */
+/* Responsive layout for smaller screens */
 @media (max-width: 768px) {
-    .certification {
+    .certification-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .certification {
         max-width: 90%;
     }
 
-    .certification img {
-        width: 100%;
-        height: 200px;
-        border-radius: 15px 15px 0 0;
-    }
-
-    .certification-content {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 
