@@ -116,7 +116,7 @@ section h2::after {
     padding: 2rem;
 }
 
-/* Container for laying out portfolio cards */
+/* Container for laying out cards horizontally */
 .project-container {
     display: flex;
     flex-wrap: wrap;
