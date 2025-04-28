@@ -191,13 +191,13 @@ section h2::after {
     }
 
     .project img {
-        width: 100%;
-        height: 200px;
+        width: 60%;
+        height: 90px;
         border-radius: 15px 15px 0 0;
     }
 
     .project-content {
-        width: 100%;
+        width: 60%;
         text-align: center;
     }
 }
