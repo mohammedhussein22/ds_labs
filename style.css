@@ -130,6 +130,7 @@ section h2::after {
     border-radius: 20px;
     z-index: -1;
     animation: animateBorder 8s linear infinite;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* The animation to move the colors */
