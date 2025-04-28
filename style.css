@@ -284,6 +284,14 @@ section h2::after {
     text-decoration: none;
     transition: color 0.3s ease;
 }
+    p a img {
+        margin: 0 10px;
+        transition: transform 0.3s;
+    }
+
+    p a img:hover {
+        transform: scale(1.2);
+    }
 
 #contact a:hover {
     color: var(--primary-color);
