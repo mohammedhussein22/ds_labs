@@ -98,17 +98,53 @@ section h2::after {
     background-color: var(--secondary-color);
 }
 
-/* About Section */
 #about {
+    position: relative;
     background-color: var(--card-bg);
     border-radius: 20px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     margin-top: 2rem;
     padding: 2.5rem;
-    /* Fancy Gradient Border */
-    border: 4px solid;
-    border-image: linear-gradient(45deg, #007ACC, #00d4ff) 1;
+    overflow: hidden; /* important to keep the animated border inside */
+    z-index: 1;
 }
+
+/* Create the animated multi-color border */
+#about::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+        270deg,
+        #ff6ec4,
+        #7873f5,
+        #4facfe,
+        #43e97b,
+        #38f9d7,
+        #ff6ec4
+    );
+    background-size: 400% 400%;
+    border-radius: 20px;
+    z-index: -1;
+    animation: animateBorder 8s linear infinite;
+}
+
+/* The animation to move the colors */
+@keyframes animateBorder {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 /* Portfolio Section */
 #portfolio {
