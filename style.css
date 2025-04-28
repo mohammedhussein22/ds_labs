@@ -285,6 +285,8 @@ section h2::after {
     transition: color 0.3s ease;
 }
     p a img {
+        width: 60px;  /* bigger size */
+        height: 60px;
         margin: 0 10px;
         transition: transform 0.3s;
     }
