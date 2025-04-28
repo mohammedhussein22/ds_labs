@@ -118,7 +118,8 @@ section h2::after {
 
 /* Container for laying out cards horizontally */
 .project-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
